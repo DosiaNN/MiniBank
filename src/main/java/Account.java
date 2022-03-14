@@ -1,8 +1,12 @@
+import java.util.Scanner;
+
 public class Account {
    private int accountNo;
     private String accountName;
     private String accountSurname;
     private long balance;
+
+    Scanner scanner = new Scanner(System.in);
 
     public Account(int accountNo, String accountName, String accountSurname, long balance) {
         this.accountNo = accountNo;
@@ -22,5 +26,15 @@ public class Account {
 
     public void setAccountNo(int accountNo) {
         this.accountNo = accountNo;
+    }
+    public void oupenAccount(){
+        System.out.println("Podaj numer");
+        accountNo = scanner.nextInt();
+        System.out.println("Podaj imię");
+        accountName = scanner.next();
+        System.out.println("Podaj nazwisko");
+        accountSurname = scanner.next();
+        System.out.println("Podaj stan konta");
+        balance = scanner.nextInt();
     }
 }
